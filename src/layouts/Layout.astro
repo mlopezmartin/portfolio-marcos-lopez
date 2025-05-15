@@ -1,0 +1,17 @@
+---
+import Header from '../components/organisms/Header/Header';
+---
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcos Lopez</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="font-sans">
+    <Header client:load/>
+    <main class="container mx-auto px-6 py-10">
+      <slot />
+    </main>
+  </body>
+</html>
