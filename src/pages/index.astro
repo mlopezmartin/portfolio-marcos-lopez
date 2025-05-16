@@ -1,22 +1,24 @@
 ---
+import Hero from '@/components/organisms/Hero/Hero';
 import Layout from '../layouts/Layout.astro';
+import LinkedinIcon from '@/components/organisms/Icons/Svg/Linkedin';
 ---
 
 <Layout>
   <!-- Sección Sobre Mi -->
-  <section id="sobre-mi" class="py-16">
-    <h2 class="text-4xl font-bold mb-4">Sobre Mi</h2>
-    <p class="leading-relaxed">
-      ¡Hola! Soy Marcos, desarrollador Full-Stack con pasión por Astro, React
-      y TypeScript…
-    </p>
-  </section>
-
-  <!-- Sección Experiencia -->
-  <section id="experiencia" class="py-16">
-    <h2 class="text-4xl font-bold mb-4">Experiencia</h2>
-    <!-- Aquí irían tus cards o listados de experiencia -->
-  </section>
+   <Hero
+    client:load 
+    name="Marcos Lopez"
+    subtitle="Desarrollador Web & Full Stack"
+    email="hola@marcos-lopez.com"
+    avatarUrl="/assets/avatar.jpg"
+    socialLinks={[
+        { label: 'Curriculum Vitae', href: '/cv.pdf', variant: 'primary' ,/*  icon: <LinkedinIcon/> */ },
+        { label: 'Twitter', href: 'https://twitter.com/tu-usuario', variant: 'secondary'  },
+        { label: 'Instagram', href: 'https://instagram.com/tu-usuario', variant: 'secondary'  }
+      ]} 
+  />
+ 
 
   <!-- Añade más secciones según tu navItems… -->
 </Layout>

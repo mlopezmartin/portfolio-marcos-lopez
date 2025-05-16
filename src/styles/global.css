@@ -1,40 +1,28 @@
 /* src/styles/global.css */
 @import "tailwindcss";
 
-
 /* Variables por defecto = light theme */
 :root {
-  --color-primary: #3b82f6;    /* azul */
+  --color-primary: #3b82f6; /* azul */
   --color-background: #ffffff; /* blanco */
-  --color-text: #1e293b;       /* gris oscuro */
+  --color-text: #1e293b; /* gris oscuro */
 }
 
 /* Sobrescribe para dark theme */
 .dark {
-  --color-primary: #1E2A38;    /* azul claro */
-  --color-background: #283747; /* azul muy oscuro */
-  --color-text: #e2e8f0;       /* gris claro */
-  --color4:#B0BEC5;
-  --color5:#2A3B4C;
-  --color6:#1E2A38;
+  --color1: #1e2a38; /* azul claro */
+  --color2: #283747; /* azul muy oscuro */
+  --color3: #e2e8f0; /* gris claro */
+  --color4: #b0bec5;
+  --color5: #2a3b4c;
+  --color6: #78909C;
+  --color7:#374151;
+  --neutral1: #fff;
+  --neutral2: #000;
 }
 
 /* Aplica las variables al body y texto */
 body {
-  background-color: var(--color-background);
-  color: var(--color-text);
-}
-
-
-/* A partir de aquí puedes inyectar tus overrides: */
-@layer base {
-  /* reset o preflight extra */
-}
-
-@layer components {
-  /* tus clases de componente custom */
-}
-
-@layer utilities {
-  /* utilidades propias */
+  background-color: var(--color2);
+  color: var(--color3);
 }

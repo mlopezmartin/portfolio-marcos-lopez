@@ -1,0 +1,1 @@
+export { default as Linkedin } from '../Icons/Svg/Linkedin';
