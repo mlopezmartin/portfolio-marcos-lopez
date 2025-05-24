@@ -1,41 +1,32 @@
-//import type { StorybookConfig } from '@storybook/react-vite';
-//
-//const config: StorybookConfig = {
-//  "stories": [
-//    "../src/**/*.mdx",
-//    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
-//  ],
-//  "addons": [
-//    "@storybook/addon-essentials",
-//    "@storybook/addon-onboarding",
-//    "@chromatic-com/storybook",
-//    "@storybook/experimental-addon-test"
-//  ],
-//  "framework": {
-//    "name": "@storybook/react-vite",
-//    "options": {}
-//  }
-//};
-//export default config;
-// .storybook/main.js
-// .storybook/main.js
-// .storybook/main.js
-const { mergeConfig } = require('vite');
-
-module.exports = {
-  framework: '@storybook/react-vite',
-  core: { builder: '@storybook/builder-vite' },
-  stories: ['../src/components/**/*.stories.@(tsx|mdx)'],
-  addons: ['@storybook/addon-essentials'],
-  viteFinal: async (config) => {
+/** @type { import('@storybook/react-vite').StorybookConfig } */
+const config = {
+  stories: ['../src/**/*.stories.@(js|jsx|mjs|ts|tsx)', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+  ],
+  framework: {
+    name: '@storybook/react-vite',
+    options: {},
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+    
     return mergeConfig(config, {
-      resolve: {
-        alias: {
-          '@': '/src',    // tu alias de src/
+      css: {
+        postcss: {
+          plugins: [
+            require('tailwindcss'),
+            require('autoprefixer'),
+          ],
         },
       },
-      // NO añadimos aquí tailwindcss() como plugin
-      // Vite ya leerá tu postcss.config.cjs
     });
   },
 };
+
+export default config;

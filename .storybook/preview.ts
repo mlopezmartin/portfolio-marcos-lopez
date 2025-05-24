@@ -1,26 +1,16 @@
-/* import type { Preview } from '@storybook/react'
+import '../src/styles/global.css';
 
-const preview: Preview = {
+/** @type { import('@storybook/react').Preview } */
+const preview = {
   parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/,
       },
     },
   },
 };
 
-export default preview; */
-// .storybook/preview.js
-import '../src/styles/global.css';
-
-export const preview = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-};
+export default preview;
