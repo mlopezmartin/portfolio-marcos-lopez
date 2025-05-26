@@ -1,3 +1,5 @@
+// .storybook/preview.js
+import React from 'react';
 import '../src/styles/global.css';
 
 /** @type { import('@storybook/react').Preview } */
@@ -11,6 +13,13 @@ const preview = {
       },
     },
   },
+  decorators: [
+    (Story) => React.createElement(
+      'div',
+      { className: 'dark', style: { padding: '1rem', background: 'var(--color2)' } },
+      React.createElement(Story)
+    ),
+  ],
 };
 
 export default preview;

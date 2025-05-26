@@ -1,7 +1,7 @@
 import * as Icons from './index';
 const icons = [
   { Icon: Icons.Linkedin, title: 'Linkedin' },
-
+  { Icon: Icons.IconClose, title: 'IconClose' },
 
 ];
 
@@ -9,16 +9,21 @@ const icons = [
 
 const IconsComponent = () => {
   return (
-    <div >
-      {icons.map(({ Icon, title }, key) => {
-        return (
-          <div  key={key}>
-            <Icon />
-            <div>{title}</div>
-          </div>
-        );
-      })}
-    </div>
+   <div className="flex flex-wrap">
+  {icons.map(({ Icon, title }, key) => {
+    return (
+      <div
+        key={key}
+        className="flex flex-col items-center justify-center h-[85px] w-[85px] rounded cursor-pointer transition-all duration-300 hover:bg-[#20202024]"
+      >
+        <Icon className="w-6 h-6" color='var(--neutral1)'/>
+        <div className="text-[10px] mt-3 w-full overflow-hidden text-ellipsis whitespace-nowrap text-center px-2 text-[color:var(--neutral1)]">
+          {title}
+        </div>
+      </div>
+    );
+  })}
+</div>
   );
 };
 
