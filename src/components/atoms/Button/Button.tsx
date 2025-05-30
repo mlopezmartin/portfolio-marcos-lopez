@@ -35,7 +35,7 @@ const Button: React.FC<AtomButtonProps & { obfuscate?: boolean }> = ({
     primary:
       'bg-[color:var(--color4)] text-[color:var(--color2)] hover:bg-[color:var(--color6)] hover:text-[color:var(--neutral1)]',
     secondary:
-      'bg-[color:var(--color7)] text-[color:var(--neutral1)] hover:bg-[color:var(--color1)]',
+      'bg-[color:var(--color7)] text-[color:var(--neutral1)] hover:bg-[color:var(--color2)]',
   };
   const classes = [baseClasses, rounded, width, height, variantClasses[variant], className]
     .filter(Boolean)

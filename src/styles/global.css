@@ -1,20 +1,30 @@
 /* src/styles/global.css */
 /* @import "tailwindcss"; */
+@import "@fontsource/inter"; 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* fuente variable */
+
 /* Variables por defecto = light theme */
 :root {
-  --color-primary: #3b82f6; /* azul */
-  --color-background: #ffffff; /* blanco */
-  --color-text: #1e293b; /* gris oscuro */
-  
+  --color1:#f5f8fa ;   /* fondo general claro */ 
+  --color2: #e2e8f0;   /* sección clara secundaria */
+  --color3: #1e2a38;   /* texto primario oscuro */
+  --color4: #475569;   /* gris intermedio */
+  --color5: #cbd5e1;   /* bordes suaves */
+  --color6: #64748b;   /* texto secundario */
+  --color7: #94a3b8;   /* detalle neutro */
+  --neutral1: #000;    /* texto principal */
+  --neutral2: #fff;    /* fondo base */
+
 }
 
 /* Sobrescribe para dark theme */
 .dark {
-  --color1: #1e2a38; /* azul claro */
-  --color2: #283747; /* azul muy oscuro */
+  --color1: #283747; /* fondo general oscuro */
+  --color2: #1e2a38; /* sección oscura secundaria */
+   /* azul muy oscuro */
   --color3: #e2e8f0; /* gris claro */
   --color4: #b0bec5;
   --color5: #2a3b4c;
@@ -26,6 +36,7 @@
 
 /* Aplica las variables al body y texto */
 body {
-  background-color: var(--color2);
+  background-color: var(--color1);
   color: var(--color3);
+  font-family: 'Inter', sans-serif;
 }

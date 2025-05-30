@@ -16,7 +16,7 @@ const preview = {
   decorators: [
     (Story) => React.createElement(
       'div',
-      { className: 'dark', style: { padding: '1rem', background: 'var(--color2)' } },
+      { className: 'dark', style: { padding: '1rem', background: 'var(--color1)' } },
       React.createElement(Story)
     ),
   ],
