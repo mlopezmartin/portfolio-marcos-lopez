@@ -1,17 +1,31 @@
 ---
 import Hero from '@/components/organisms/Hero/Hero';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro';
 import AboutMe from '@/components/molecules/AboutMe/AboutMe';
 import Skills from '@/components/molecules/Skills/Skills';
-import { SkillsMock } from '../mocks/molecules/Skills/skills.mock';
+import { useTranslations } from '@/i18n/utils';
+import { languages, defaultLang } from '@/i18n/lang';
+import { loadContent } from '@/content/loadContent';
+
+export async function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } }
+];
+}
+
+const langParam = Astro.params.lang;
+const lang = Object.keys(languages).includes(langParam) ? langParam as keyof typeof languages : defaultLang;
+const t = useTranslations(lang);
+
+const content = await loadContent(lang);
 ---
 
 <Layout>
   <!-- Sección Sobre Mi -->
    <Hero
-    client:load 
     name="Marcos Lopez"
-    subtitle="Desarrollador Web & Full Stack"
+    subtitle={t("home.welcome")}
     email="hola@marcos-lopez.com"
     avatarUrl="/assets/img/logo.jpeg"
     socialLinks={[
@@ -21,7 +35,7 @@ import { SkillsMock } from '../mocks/molecules/Skills/skills.mock';
       ]} 
   />
   <AboutMe/>
-  <Skills {...SkillsMock} />
+  <Skills {...content.skills} />
 
   <!-- Añade más secciones según tu navItems… -->
 </Layout>

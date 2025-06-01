@@ -5,7 +5,7 @@ const icons = [
   { Icon: Icons.IconCss, title: "IconCss" },
   { Icon: Icons.IconHtml, title: "IconHtml" },
   { Icon: Icons.IconJavascript, title: "IconJavascript" },
-    { Icon: Icons.IconReact, title: "IconReact" },
+  { Icon: Icons.IconReact, title: "IconReact" },
 ];
 
 const IconsComponent = () => {
