@@ -1,16 +1,16 @@
 import type { SkillsGroupedProps } from "@/components/molecules/SkillsGrouped/SkillsGrouped.types";
 
 const skillsGroupedContent: SkillsGroupedProps = {
-  sectionTitle: '⭐ Skills',
+  sectionTitle: 'Skills',
   groups: [
     {
       title: 'Professional',
       skills: [
-        { name: 'Agile Methodology', percentage: 100 },
+        { name: 'Metodología Agile', percentage: 100 },
         { name: 'Front-end developer', percentage: 90 },
-        { name: 'AngularJS, NodeJS, Front Frameworks', percentage: 90 },
-        { name: 'Back-end developer', percentage: 80 },
-        { name: 'J2EE, Spring, Oracle', percentage: 80 },
+        { name: 'NextJs, NodeJS, Front Frameworks', percentage: 90 },
+        { name: 'Back-end developer', percentage: 85 },
+        { name: 'APIs RESTful, Autenticación JWT, ORMs', percentage: 85 },
       ],
     },
     {
@@ -18,9 +18,9 @@ const skillsGroupedContent: SkillsGroupedProps = {
       skills: [
         { name: 'Commitment', percentage: 100 },
         { name: 'Creativity', percentage: 90 },
-        { name: 'Leadership', percentage: 80 },
-        { name: 'Communication', percentage: 85 },
-        { name: 'Analytical thinking', percentage: 80 },
+        { name: 'Leadership', percentage: 95 },
+        { name: 'Communication', percentage: 90 },
+        { name: 'Analytical thinking', percentage: 90 },
       ],
     },
   ],

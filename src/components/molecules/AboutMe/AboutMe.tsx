@@ -3,7 +3,7 @@ import React from 'react';
 const AboutMe: React.FC = () => {
   return (
     <section
-      id="sobre-mi"
+      id="aboutme"
       className="bg-[color:var(--color2)] rounded-lg p-6 overflow-hidden"
       style={{ lineHeight: 1.5 }}
     >

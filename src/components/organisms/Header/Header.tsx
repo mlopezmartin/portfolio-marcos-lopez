@@ -1,21 +1,13 @@
 import React, { useState } from "react";
-import type { NavItem } from "./Header.types";
+import type { HeaderProps, NavItem } from "./Header.types";
 import ButtonToggle from "@/components/atoms/ButtonToggle/ButtonToggle";
 import IconMenu from "../Icons/Svg/IconMenu";
 import { IconClose } from "../Icons";
+import LanguageToggle from "@/components/atoms/LanguageToggle/LanguageToggle";
 
-const navItems: NavItem[] = [
-  { label: "Sobre Mi", href: "#sobre-mi" },
-  { label: "Experiencia", href: "#experiencia" },
-  { label: "Habilidades Full Stack", href: "#fullstack" },
-  { label: "Otras Habilidades", href: "#otras-habilidades" },
-  { label: "Otras Herramientas", href: "#otras-herramientas" },
-  { label: "Proyectos", href: "#proyectos" },
-  { label: "Contacto", href: "#contacto" },
-  { label: "CV", href: "/cv.pdf" },
-];
 
-const Header: React.FC = () => {
+
+const Header: React.FC<HeaderProps> = ({navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -42,9 +34,23 @@ const Header: React.FC = () => {
           </ul>
           <ButtonToggle />
           <div className="flex gap-2 items-center">
-            <a href="/es/" className="px-2 py-1 rounded border text-sm hover:bg-gray-200 dark:hover:bg-gray-700">ES</a>
-            <a href="/en/" className="px-2 py-1 rounded border text-sm hover:bg-gray-200 dark:hover:bg-gray-700">EN</a>
-          </div>
+              {/* <a
+                href="/es/"
+                onClick={() => localStorage.setItem("lang", "es")}
+                className="px-2 py-1 rounded border text-sm hover:bg-gray-200 dark:hover:bg-gray-700"
+              >
+                ES
+              </a>
+              <a
+                href="/en/"
+                onClick={() => localStorage.setItem("lang", "en")}
+                className="px-2 py-1 rounded border text-sm hover:bg-gray-200 dark:hover:bg-gray-700"
+              >
+                EN
+              </a> */}
+              <LanguageToggle/>
+            </div>
+
         </nav>
 
         {/* Mobile Nav Toggle */}

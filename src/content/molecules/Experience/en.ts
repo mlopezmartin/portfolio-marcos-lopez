@@ -8,7 +8,7 @@ const experienceContent: ExperienceProps = {
       company: 'Totalrenting',
       duration: '1 year and 2 months',
       description:
-        'During this time, I focused on developing modern web applications using technologies like Node.js, React, Strapi, and Next.js. I participated in the design and implementation of new features, performance optimization, and platform maintenance.',
+        'During this period, I focused on developing modern web applications using technologies such as Node.js, React, Strapi, and Next.js. I was involved in creating the project from scratch, implementing new features, optimizing performance, and maintaining the platform.',
     },
     {
       role: 'Professional Internship',

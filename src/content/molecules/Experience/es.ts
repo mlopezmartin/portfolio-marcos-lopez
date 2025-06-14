@@ -8,7 +8,7 @@ const experienceContent: ExperienceProps = {
       company: 'Totalrenting',
       duration: '1 año y 2 meses',
       description:
-        'Durante este periodo, me enfoqué en el desarrollo de aplicaciones web modernas utilizando tecnologías como Node.js, React, Strapi y Next.js. Participé en el diseño e implementación de nuevas funcionalidades, optimización de rendimiento y mantenimiento de la plataforma.',
+        'Durante este periodo, me enfoqué en el desarrollo de aplicaciones web modernas utilizando tecnologías como Node.js, React, Strapi y Next.js. Participé creando el proyecto desde cero, implementación de nuevas funcionalidades, optimización de rendimiento y mantenimiento de la plataforma.',
     },
     {
       role: 'Prácticas Profesionales',

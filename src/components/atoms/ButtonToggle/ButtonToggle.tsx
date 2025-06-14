@@ -3,19 +3,20 @@ import React, { useState, useEffect } from 'react';
 const ButtonToggle: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
-  // Al montar, arrancamos en dark o en lo guardado
+  // Esta parte asegura que el botón se sincroniza con localStorage incluso tras navegar
   useEffect(() => {
-    const stored = localStorage.getItem('theme') as 'light' | 'dark' | null;
-    const initial = stored === 'light' ? 'light' : 'dark';
-    setTheme(initial);
-    document.documentElement.classList.toggle('dark', initial === 'dark');
+    const localTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
+    const storedTheme = localTheme || (window as any).__theme || 'dark';
+    setTheme(storedTheme);
+    document.documentElement.classList.toggle('dark', storedTheme === 'dark');
   }, []);
 
   const toggleTheme = () => {
     const next = theme === 'dark' ? 'light' : 'dark';
     setTheme(next);
-    document.documentElement.classList.toggle('dark', next === 'dark');
     localStorage.setItem('theme', next);
+    document.documentElement.classList.toggle('dark', next === 'dark');
+    (window as any).__theme = next;
   };
 
   return (
@@ -32,7 +33,6 @@ const ButtonToggle: React.FC = () => {
         }`}
       >
         {theme === 'dark' ? (
-          // Luna
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-full w-full p-1 text-gray-800"
@@ -48,7 +48,6 @@ const ButtonToggle: React.FC = () => {
             />
           </svg>
         ) : (
-          // Sol
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-full w-full p-1 text-yellow-500"

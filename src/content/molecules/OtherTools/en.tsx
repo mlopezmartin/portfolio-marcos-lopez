@@ -1,30 +1,51 @@
-import type { OtherToolsProps } from '@/components/molecules/OtherTools/OtherTools.types';
-import { IconClose } from '@/components/organisms/Icons';
-
-
+import type { OtherToolsProps } from "@/components/molecules/OtherTools/OtherTools.types";
+import {
+  IconAdobexd,
+  IconClose,
+  IconCpanel,
+  IconDocker,
+  IconFtp,
+  IconGit,
+  IconGithub,
+  IconIllustrator,
+  IconJira,
+  IconNotion,
+  IconPhotoshop,
+  IconPlesk,
+  IconPostman,
+  IconStorybook,
+  IconStrapi,
+  IconVsCode,
+  IconWordpress,
+} from "@/components/organisms/Icons";
 
 const otherToolsContent: OtherToolsProps = {
-  sectionTitle: '💼 Other Tools',
+  sectionTitle: "Other Tools",
   groups: [
     {
-      title: 'Developer Tools',
+      title: "Developer Tools",
       tools: [
-        { name: 'WordPress', icon: <IconClose /> },
-        { name: 'Next.js', icon: <IconClose /> },
-        { name: 'Strapi', icon: <IconClose /> },
-        { name: 'Postman', icon: <IconClose /> },
-        { name: 'FTP Clients', icon: <IconClose /> },
-        { name: 'Git', icon: <IconClose /> },
-        { name: 'JIRA', icon: <IconClose /> },
+        { name: "WordPress", icon: <IconWordpress /> },
+        { name: "Strapi", icon: <IconStrapi widht={20} height={20}/> },
+        { name: "Storybook", icon: <IconStorybook /> },
+        { name: "Postman", icon: <IconPostman widht={20} height={20}/> },
+        { name: "FTP Clients", icon: <IconFtp /> },
+        { name: "Github", icon: <IconGithub /> },
+        { name: "Git", icon: <IconGit /> },
+        { name: "Jira", icon: <IconJira widht={20} height={20}/> },
+        { name: "Notion", icon: <IconNotion /> },
+        { name: "Vscode", icon: <IconVsCode /> },
+        { name: "Docker", icon: <IconDocker /> },
+        { name: "Plesk", icon: <IconPlesk widht={30} height={30}/> },
+        { name: "Cpanel", icon: <IconCpanel widht={20} height={20}/> },
       ],
     },
     {
-      title: 'Other Tools (Design, etc.)',
+      title: "Other Tools (Design, etc.)",
       tools: [
-        { name: 'Photoshop', icon: <IconClose /> },
-        { name: 'Illustrator', icon: <IconClose /> },
-        { name: 'Adobe XD', icon: <IconClose /> },
-        { name: 'PowerPoint', icon: <IconClose /> },
+        { name: "Photoshop", icon: <IconPhotoshop /> },
+        { name: "Illustrator", icon: <IconIllustrator/> },
+        { name: "Adobe XD", icon: <IconAdobexd /> },
       ],
     },
   ],

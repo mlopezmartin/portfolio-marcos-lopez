@@ -1,15 +1,29 @@
 ---
-import Header from '../components/organisms/Header/Header';
+import Header from "../components/organisms/Header/Header";
+
+const { content, lang } = Astro.props;
 ---
-<html lang="es" class="dark">
+
+<html lang={lang} class="transition-colors duration-300">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcos Lopez</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <script>
+  // Aplica el tema antes del render (sin parpadeo)
+  (function () {
+    try {
+      const theme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.classList.toggle('dark', theme === 'dark');
+    } catch (e) {
+      document.documentElement.classList.add('dark');
+    }
+  })();
+</script>
   </head>
   <body class="font-sans">
-    <Header client:load/>
+    <Header {...content.Header} client:load />
     <main class="container mx-auto px-6 py-10">
       <slot />
     </main>

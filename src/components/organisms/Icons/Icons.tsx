@@ -19,6 +19,7 @@ const icons = [
   { Icon: Icons.IconNotion, title: "IconNotion" },
   { Icon: Icons.IconPhotoshop, title: "IconPhotoshop" },
   { Icon: Icons.IconIllustrator, title: "IconIllustrator" },
+    { Icon: Icons.IconAdobexd, title: "IconAdobexd" },
   { Icon: Icons.IconAstro, title: "IconAstro" },
   { Icon: Icons.IconNodeJs, title: "IconNodeJs" },
   { Icon: Icons.IconTypescript, title: "IconTypescript" },
@@ -34,6 +35,15 @@ const icons = [
   { Icon: Icons.IconComponents, title: "IconComponents" },
   { Icon: Icons.IconDocker, title: "IconDocker" },
   { Icon: Icons.IconPlesk, title: "IconPlesk" },
+  { Icon: Icons.IconStorybook, title: "IconStorybook" },
+  { Icon: Icons.IconCode, title: "IconCode" },
+  { Icon: Icons.IconApi, title: "IconApi" },
+  { Icon: Icons.IconJquery, title: "IconJquery" },
+  { Icon: Icons.IconStar, title: "IconStar" },
+  { Icon: Icons.IconMail, title: "IconMail" },
+  { Icon: Icons.IconSuitcase, title: "IconSuitcase" },
+  { Icon: Icons.IconBootstrap, title: "IconBootstrap" },
+    { Icon: Icons.IconCpanel, title: "IconCpanel" },
 ];
 
 const IconsComponent = () => {
