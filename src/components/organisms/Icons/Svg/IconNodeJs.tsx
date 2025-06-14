@@ -1,4 +1,4 @@
-const LinkedinIcon = ({
+const IconNodeJs = ({
   className,
   width = 24,
   height = 24,
@@ -16,13 +16,10 @@ const LinkedinIcon = ({
       stroke-linejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M8 11v5" />
-      <path d="M8 8v.01" />
-      <path d="M12 16v-5" />
-      <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-      <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+      <path d="M9 9v8.044a2 2 0 0 1 -2.996 1.734l-1.568 -.9a3 3 0 0 1 -1.436 -2.561v-6.635a3 3 0 0 1 1.436 -2.56l6 -3.667a3 3 0 0 1 3.128 0l6 3.667a3 3 0 0 1 1.436 2.561v6.634a3 3 0 0 1 -1.436 2.56l-6 3.667a3 3 0 0 1 -3.128 0" />
+      <path d="M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3h-3.5" />
     </svg>
   );
 };
 
-export default LinkedinIcon;
+export default IconNodeJs;

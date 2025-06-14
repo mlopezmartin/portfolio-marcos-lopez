@@ -1,4 +1,4 @@
-const LinkedinIcon = ({
+const IconPhp = ({
   className,
   width = 24,
   height = 24,
@@ -16,13 +16,13 @@ const LinkedinIcon = ({
       stroke-linejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M8 11v5" />
-      <path d="M8 8v.01" />
-      <path d="M12 16v-5" />
-      <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-      <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+      <path d="M12 12m-10 0a10 9 0 1 0 20 0a10 9 0 1 0 -20 0" />
+      <path d="M5.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653" />
+      <path d="M15.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653" />
+      <path d="M12 7.5l-1 5.5" />
+      <path d="M11.6 10h2.4l-.5 3" />
     </svg>
   );
 };
 
-export default LinkedinIcon;
+export default IconPhp;

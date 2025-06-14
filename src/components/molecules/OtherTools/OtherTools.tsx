@@ -2,6 +2,7 @@
 import React from 'react';
 import type { OtherToolsProps } from './OtherTools.types';
 import Button from '@/components/atoms/Button/Button';
+import styles from './otherTools.module.css';
 
 const OtherTools: React.FC<OtherToolsProps> = ({ sectionTitle, groups }) => {
   return (
@@ -13,13 +14,13 @@ const OtherTools: React.FC<OtherToolsProps> = ({ sectionTitle, groups }) => {
           </h2>
         </div>
 
-        <div className="flex flex-col gap-8">
+        <div  className={`${styles.otherTools} flex flex-col gap-8`}>
           {groups.map((group, index) => (
             <div
               key={index}
               className="bg-[color:var(--color2)] rounded-lg p-6 shadow-md w-full flex flex-col items-center gap-4"
             >
-              <h3 className="text-2xl font-semibold text-center text-[color:var(--color4)]">
+              <h3 className="text-2xl font-semibold text-center text-[color:var(--color3)]">
                 {group.title}
               </h3>
               <div className="flex flex-wrap justify-center gap-4">

@@ -1,4 +1,4 @@
-const LinkedinIcon = ({
+const IconMySql = ({
   className,
   width = 24,
   height = 24,
@@ -16,13 +16,10 @@ const LinkedinIcon = ({
       stroke-linejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M8 11v5" />
-      <path d="M8 8v.01" />
-      <path d="M12 16v-5" />
-      <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-      <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+      <path d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3" />
+      <path d="M9 7h.01" />
     </svg>
   );
 };
 
-export default LinkedinIcon;
+export default IconMySql;

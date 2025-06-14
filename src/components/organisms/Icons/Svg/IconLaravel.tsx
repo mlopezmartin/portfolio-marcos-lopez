@@ -1,4 +1,4 @@
-const LinkedinIcon = ({
+const IconLaravel = ({
   className,
   width = 24,
   height = 24,
@@ -16,13 +16,16 @@ const LinkedinIcon = ({
       stroke-linejoin="round"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M8 11v5" />
-      <path d="M8 8v.01" />
-      <path d="M12 16v-5" />
-      <path d="M16 16v-3a2 2 0 1 0 -4 0" />
-      <path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+      <path d="M3 17l8 5l7 -4v-8l-4 -2.5l4 -2.5l4 2.5v4l-11 6.5l-4 -2.5v-7.5l-4 -2.5z" />
+      <path d="M11 18v4" />
+      <path d="M7 15.5l7 -4" />
+      <path d="M14 7.5v4" />
+      <path d="M14 11.5l4 2.5" />
+      <path d="M11 13v-7.5l-4 -2.5l-4 2.5" />
+      <path d="M7 8l4 -2.5" />
+      <path d="M18 10l4 -2.5" />
     </svg>
   );
 };
 
-export default LinkedinIcon;
+export default IconLaravel;

@@ -9,6 +9,7 @@ import { loadContent } from '@/content/loadContent';
 import SkillsGrouped from '@/components/molecules/SkillsGrouped/SkillsGrouped';
 import Experience from '@/components/molecules/Experience/Experience';
 import OtherTools from '@/components/molecules/OtherTools/OtherTools';
+import Curriculum from '@/components/molecules/Curriculum/Curriculum';
 
 export async function getStaticPaths() {
   return [
@@ -43,4 +44,6 @@ const content = await loadContent(lang);
   <Experience {...content.Experience} />
 
   <OtherTools {...content.OtherTools} />
+
+  <Curriculum {...content.Curriculum} />
 </Layout>
