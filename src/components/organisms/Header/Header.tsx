@@ -34,20 +34,6 @@ const Header: React.FC<HeaderProps> = ({navItems }) => {
           </ul>
           <ButtonToggle />
           <div className="flex gap-2 items-center">
-              {/* <a
-                href="/es/"
-                onClick={() => localStorage.setItem("lang", "es")}
-                className="px-2 py-1 rounded border text-sm hover:bg-gray-200 dark:hover:bg-gray-700"
-              >
-                ES
-              </a>
-              <a
-                href="/en/"
-                onClick={() => localStorage.setItem("lang", "en")}
-                className="px-2 py-1 rounded border text-sm hover:bg-gray-200 dark:hover:bg-gray-700"
-              >
-                EN
-              </a> */}
               <LanguageToggle/>
             </div>
 

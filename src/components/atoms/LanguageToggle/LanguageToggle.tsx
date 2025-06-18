@@ -1,39 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const LanguageToggle: React.FC = () => {
-  const [lang, setLang] = useState<'es' | 'en'>('es');
-
-  useEffect(() => {
-    const storedLang = localStorage.getItem("lang") as 'es' | 'en' | null;
-    if (storedLang) {
-      setLang(storedLang);
-    }
-  }, []);
+  const currentLang = typeof window !== "undefined" && window.location.pathname.startsWith("/en") ? "en" : "es";
+  const nextLang = currentLang === "es" ? "en" : "es";
 
   const toggleLang = () => {
-    const nextLang = lang === 'es' ? 'en' : 'es';
-    setLang(nextLang);
-    localStorage.setItem("lang", nextLang);
-    window.location.href = `/${nextLang}/`;
+    const newPath = window.location.pathname.replace(/^\/(en|es)/, `/${nextLang}`);
+    window.location.href = newPath; // mantiene la misma ruta pero en otro idioma
   };
 
   return (
     <button
       onClick={toggleLang}
       aria-label="Cambiar idioma"
-      className={`flex w-24 h-8 rounded-full bg-gray-300 dark:bg-gray-600 relative transition-colors`}
+      className="px-3 py-1 border rounded text-sm"
     >
-      <span
-        className={`absolute w-1/2 h-full bg-white dark:bg-gray-800 rounded-full shadow transition-transform ${
-          lang === "es" ? "translate-x-0" : "translate-x-full"
-        }`}
-      />
-      <span className="flex-1 text-center text-sm z-10 leading-8">
-        Español
-      </span>
-      <span className="flex-1 text-center text-sm z-10 leading-8">
-        Inglés
-      </span>
+      {nextLang.toUpperCase()}
     </button>
   );
 };
