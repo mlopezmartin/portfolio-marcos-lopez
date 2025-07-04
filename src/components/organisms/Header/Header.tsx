@@ -14,8 +14,8 @@ const Header: React.FC<HeaderProps> = ({navItems }) => {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className=" text-text w-full z-50 fixed top-0 shadow-md">
-      <div className="container inset-0 bg-[color:var(--color1)] mx-auto flex justify-between items-center py-4 px-6">
+    <header className=" text-text w-full z-50 fixed top-0 shadow-md bg-[color:var(--color1)]">
+      <div className="container inset-0  mx-auto flex justify-between items-center py-4 px-6">
         <h1 className="text-2xl font-bold text-primary">Marcos Lopez</h1>
 
         {/* Desktop Nav */}

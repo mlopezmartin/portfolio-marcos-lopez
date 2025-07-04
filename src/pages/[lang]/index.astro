@@ -1,5 +1,5 @@
 ---
-import Hero from '@/components/organisms/Hero/Hero';
+import Hero from '@/components/molecules/Hero/Hero';
 import Layout from '../../layouts/Layout.astro';
 import AboutMe from '@/components/molecules/AboutMe/AboutMe';
 import Skills from '@/components/molecules/Skills/Skills';
@@ -26,19 +26,10 @@ const content = await loadContent(lang);
 ---
 
 <Layout content={content} lang={lang}>
-  <!-- Sección Sobre Mi -->
-   <Hero
-    name="Marcos Lopez"
-    subtitle={t("home.welcome")}
-    email="hola@marcos-lopez.com"
-    avatarUrl="/assets/img/logo.jpeg"
-    socialLinks={[
-        { label: 'Curriculum Vitae', href: '/cv.pdf', variant: 'primary' ,/*  icon: <LinkedinIcon/> */ },
-        { label: 'Twitter', href: 'https://twitter.com/tu-usuario', variant: 'secondary'  },
-        { label: 'Instagram', href: 'https://instagram.com/tu-usuario', variant: 'secondary'  }
-      ]} 
+  <Hero
+    {...content.Hero} 
   />
-  <AboutMe/>
+  <AboutMe {...content.AboutMe} />
   <Skills {...content.skills} />
   <SkillsGrouped {...content.SkillsGrouped} />
   <Experience {...content.Experience} />

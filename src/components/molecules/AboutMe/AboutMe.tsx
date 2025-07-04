@@ -1,46 +1,33 @@
 import React from 'react';
 
-const AboutMe: React.FC = () => {
+type AboutMeProps = {
+  paragraphs: string[];
+};
+
+const AboutMe: React.FC<AboutMeProps> = ({ paragraphs }) => {
   return (
     <section
       id="aboutme"
-      className="bg-[color:var(--color2)] rounded-lg p-6 overflow-hidden"
+      className="bg-[color:var(--color2)] rounded-lg p-6 overflow-hidden  container mx-auto flex flex-col md:flex-row items-center md:justify-between px-6 max-w-screen-xl"
       style={{ lineHeight: 1.5 }}
     >
-      <pre className="whitespace-pre-wrap break-words">
+     
+      <pre className="whitespace-pre-wrap break-words max-w-screen-xl">
         <code className="break-words">
           <span className="text-green-400">sobreMi</span>
           <span className="text-[color:var(--neutral1)]">(Marcos, Lopez) </span>
           <span className="text-[color:var(--neutral1)]">{'{'}</span>
           {'\n\n'}
-          <p className="pl-2 inline">
-            <span className="text-[color:var(--neutral1)]">Soy un </span>
-            <span className="text-yellow-300">Ingeniero FrontEnd Sénior</span>
-            <span className="text-[color:var(--neutral1)]"> – actualmente también </span>
-            <span className="text-yellow-300">Tech Lead</span>
-            <span className="text-[color:var(--neutral1)]">.</span>
-          </p>
-          {'\n\n'}
-          <p className="pl-2 inline">
-            <span className="text-[color:var(--neutral1)]">He trabajado en múltiples proyectos </span>
-            <span className="text-yellow-300">JavaScript</span>
-            <span className="text-[color:var(--neutral1)]">
-              {' '}
-              como en fintech, bancos, salud, automóvil & videojuegos; para start-ups y grandes empresas tecnológicas.
-            </span>
-          </p>
-          {'\n\n'}
-          <p className="pl-2 inline">
-            <span className="text-[color:var(--neutral1)]">Ahora soy un entusiasta de </span>
-            <span className="text-yellow-300">ReactJS & TypeScript</span>
-            <span className="text-[color:var(--neutral1)]">, pero también tengo experiencia profesional con </span>
-            <span className="text-yellow-300">Angular (5↑)</span>
-            <span className="text-[color:var(--neutral1)]">, VueJS, React Native y Backbone.</span>
-          </p>
-          {'\n\n'}
+          {paragraphs?.map((text, idx) => (
+            <p key={idx} className="pl-2 inline text-[color:var(--neutral1)]">
+              {text}
+              {'\n\n'}
+            </p>
+          ))}
           <span className="text-[color:var(--neutral1)]">{'}'}</span>
         </code>
       </pre>
+
     </section>
   );
 };

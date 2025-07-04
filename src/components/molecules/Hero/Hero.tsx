@@ -12,8 +12,8 @@ const Hero: React.FC<HeroProps> = ({
   socialLinks,
 }) => {
   return (
-    <section className="bg-background text-text py-16">
-      <div className="container mx-auto flex flex-col md:flex-row items-center md:justify-between px-6">
+    <section className="bg-background text-text py-16 ">
+      <div className="container mx-auto flex flex-col md:flex-row items-center md:justify-between px-6 max-w-screen-xl">
         {/* Texto principal */}
         <div className="max-w-xl">
           <h1 className="text-5xl font-extrabold mb-2 text-primary">{name}</h1>
@@ -26,9 +26,8 @@ const Hero: React.FC<HeroProps> = ({
           </a>
           {/* Botones de acciones */}
           <div className="flex flex-wrap gap-4">
-            {socialLinks.map(link => (
+            {socialLinks?.map(link => (
             <Button
-                obfuscate
                 key={link.href}
                 href={link.href}
                 rounded="rounded-full"
@@ -49,10 +48,10 @@ const Hero: React.FC<HeroProps> = ({
             <img
               src={avatarUrl}
               alt={`${name} avatar`}
-              className="w-48 h-48 rounded-full object-cover shadow-lg"
+              className="w-60 h-60 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full object-cover shadow-lg"
             />
           ) : (
-            <div className="w-48 h-48 rounded-full bg-gray-700"></div>
+            <div className="w-60 h-60 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full bg-gray-700"></div>
           )}
         </div>
       </div>

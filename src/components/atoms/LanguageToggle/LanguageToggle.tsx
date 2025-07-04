@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const LanguageToggle: React.FC = () => {
-  const currentLang = typeof window !== "undefined" && window.location.pathname.startsWith("/en") ? "en" : "es";
-  const nextLang = currentLang === "es" ? "en" : "es";
+  const [nextLang, setNextLang] = useState<"es" | "en">("en");
+
+  useEffect(() => {
+    const currentLang = window.location.pathname.startsWith("/en") ? "en" : "es";
+    const altLang = currentLang === "es" ? "en" : "es";
+    setNextLang(altLang);
+  }, []);
 
   const toggleLang = () => {
     const newPath = window.location.pathname.replace(/^\/(en|es)/, `/${nextLang}`);
-    window.location.href = newPath; // mantiene la misma ruta pero en otro idioma
+    localStorage.setItem("lang", nextLang); // opcional: guarda preferencia
+    window.location.href = newPath;
   };
 
   return (
