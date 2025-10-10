@@ -18,6 +18,7 @@ import {
   IconVsCode,
   IconWordpress,
 } from "@/components/organisms/Icons";
+import IconSlack from "@/components/organisms/Icons/Svg/IconSlack";
 
 const otherToolsContent: OtherToolsProps = {
   sectionTitle: "Otras Herramientas",
@@ -33,6 +34,7 @@ const otherToolsContent: OtherToolsProps = {
         { name: "Github", icon: <IconGithub /> },
         { name: "Git", icon: <IconGit /> },
         { name: "Jira", icon: <IconJira widht={20} height={20} /> },
+        { name: "Slack", icon: <IconSlack widht={30} height={30} /> },
         { name: "Notion", icon: <IconNotion /> },
         { name: "Vscode", icon: <IconVsCode /> },
         { name: "Docker", icon: <IconDocker /> },
