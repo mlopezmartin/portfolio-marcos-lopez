@@ -31,10 +31,11 @@ const Hero: React.FC<HeroProps> = ({
                 key={link.href}
                 href={link.href}
                 rounded="rounded-full"
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.download ? undefined : "_blank"}
+                rel={link.download ? undefined : "noopener noreferrer"}
                 variant={link.variant}
                 className="font-medium"
+                download={link.download}
             >
                 {link.icon}
                 {link.label}

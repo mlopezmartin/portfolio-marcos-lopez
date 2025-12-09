@@ -5,14 +5,15 @@ import LinkedinIcon from "@/components/organisms/Icons/Svg/Linkedin";
 const heroContent: HeroProps = {
   name: "Marcos Lopez",
   subtitle: "Full Stack Web Developer",
-  email: "hola@mlopezmartin.com",
+  email: "contacto@mlopezmartin.com",
   avatarUrl: "/assets/img/logo.jpeg",
   socialLinks: [
     {
       label: "Curriculum",
-      href: "/cv.pdf",
+      href: "/assets/pdf/Currículum_Marcos_López_Martín.pdf",
       variant: "primary",
       icon: <IconPdf />,
+      download: "Curriculum_Marcos_Lopez_Martin.pdf",
     },
     {
       label: "Linkedin",

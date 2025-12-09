@@ -4,6 +4,7 @@ export interface SocialLink {
   href: string;
   variant?: 'primary' | 'secondary';
   icon?: React.ReactNode;
+  download?: boolean | string;
 }
 
 

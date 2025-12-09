@@ -25,7 +25,7 @@ const Curriculum: React.FC<CurriculumProps> = ({
               variant="secondary"
               rounded="rounded-full"
               href={downloadUrl}
-              download
+              download="Curriculum_Marcos_Lopez_Martin.pdf"
               className="text-lg font-semibold px-6 py-3"
             >
               <IconDocumentDownload className="mr-2" />

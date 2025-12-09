@@ -26,6 +26,7 @@ const Header: React.FC<HeaderProps> = ({navItems }) => {
                 <a
                   href={item.href}
                   className="hover:text-primary transition-colors"
+                  download={item.download}
                 >
                   {item.label}
                 </a>
@@ -83,6 +84,7 @@ const Header: React.FC<HeaderProps> = ({navItems }) => {
                   href={item.href}
                   onClick={closeMenu}
                   className="block hover:text-primary transition-colors text-lg"
+                  download={item.download}
                 >
                   {item.label}
                 </a>

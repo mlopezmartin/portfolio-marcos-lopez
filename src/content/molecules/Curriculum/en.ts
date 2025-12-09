@@ -5,7 +5,7 @@ const curriculumContent: CurriculumProps = {
   description:
     'Download my Curriculum Vitae to get a detailed overview of my professional experience, skills, and academic background.',
   buttonText: 'Download CV',
-  downloadUrl: '/cv/Pietro-Fiorillo-CV.pdf', // cambia esto según el path real
+  downloadUrl: '/assets/pdf/Currículum_Marcos_López_Martín.pdf', // cambia esto según el path real
 };
 
 export default curriculumContent;
