@@ -1,0 +1,43 @@
+/* Input CSS para Tailwind v4 */
+@import "tailwindcss";
+
+@source "../../../src";
+
+/* Configuración de tema */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Variables por defecto = light theme */
+:root {
+  --color1: #f5f8fa; /* fondo general claro */
+  --color2: #e2e8f0; /* sección clara secundaria */
+  --color3: #1e2a38; /* texto primario oscuro */
+  --color4: #475569; /* gris intermedio */
+  --color5: #cbd5e1; /* bordes suaves */
+  --color6: #64748b; /* texto secundario */
+  --color7: #94a3b8; /* detalle neutro */
+  --neutral1: #000; /* texto principal */
+  --neutral2: #fff; /* fondo base */
+}
+
+/* Sobrescribe para dark theme */
+.dark {
+  --color1: #283747; /* fondo general oscuro */
+  --color2: #1e2a38; /* sección oscura secundaria */
+  /* azul muy oscuro */
+  --color3: #e2e8f0; /* gris claro */
+  --color4: #b0bec5;
+  --color5: #2a3b4c;
+  --color6: #78909c;
+  --color7: #374151;
+  --neutral1: #fff;
+  --neutral2: #000;
+}
+
+/* Aplica las variables al body y texto */
+body {
+  background-color: var(--color1);
+  color: var(--color3);
+  font-family: var(--font-sans);
+}

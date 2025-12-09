@@ -2,7 +2,7 @@
 import React from "react";
 import type { OtherToolsProps } from "./OtherTools.types";
 import Button from "@/components/atoms/Button/Button";
-import styles from "./OtherTools.module.css";
+/* import styles from "./OtherTools.module.css"; */
 import { IconSuitcase } from "@/components/organisms/Icons";
 
 const OtherTools: React.FC<OtherToolsProps> = ({ sectionTitle, groups }) => {
@@ -19,7 +19,7 @@ const OtherTools: React.FC<OtherToolsProps> = ({ sectionTitle, groups }) => {
           </h2>
         </div>
 
-        <div className={`${styles.otherTools} flex flex-col gap-8`}>
+        <div className={` flex flex-col gap-8`}>
           {groups.map((group, index) => (
             <div
               key={index}

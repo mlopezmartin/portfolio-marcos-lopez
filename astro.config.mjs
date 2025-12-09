@@ -15,19 +15,22 @@ export default defineConfig({
 }); */
 
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
 import react from '@astrojs/react';
 
 export default defineConfig({
+  // Configura tu URL de producción (importante para rutas absolutas)
+  site: 'https://tupagina.com', // Reemplaza con tu dominio real
+  
+  // Si tu sitio está en un subdirectorio, configura base: '/subdirectorio/'
+  // Si está en la raíz del dominio, déjalo así:
+  base: '/',
+  
   integrations: [
-    react(),
-    tailwind({
-      applyBaseStyles: false, // Importante para Storybook
-    })
+    react()
   ],
-  vite: {
-    css: {
-      devSourcemap: true
-    }
+  
+  // Asegura que los assets se sirvan correctamente
+  build: {
+    assets: 'assets'
   }
 });

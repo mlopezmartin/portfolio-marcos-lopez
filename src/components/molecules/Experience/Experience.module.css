@@ -1,7 +1,0 @@
-.experienceSection > div:first-of-type {
-  background-color: var(--color2); /* o el color que tú quieras */
-}
-
-.experienceSection > div:not(:first-of-type) {
-  background-color: var(--color5); /* o var(--color2) si quieres igualarlos */
-}

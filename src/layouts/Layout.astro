@@ -10,18 +10,18 @@ const { content, lang } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcos Lopez</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <script>
-  // Aplica el tema antes del render (sin parpadeo)
-  (function () {
-    try {
-      const theme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.classList.toggle('dark', theme === 'dark');
-    } catch (e) {
-      document.documentElement.classList.add('dark');
-    }
-  })();
-</script>
+      // Aplica el tema antes del render (sin parpadeo)
+      (function () {
+        try {
+          const theme = localStorage.getItem("theme") || "dark";
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch (e) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
   </head>
   <body class="font-sans">
     <Header {...content.Header} client:load />
