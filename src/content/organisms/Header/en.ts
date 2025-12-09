@@ -8,7 +8,7 @@ const headerContent: HeaderProps = {
         { label: "Experience", href: "#experience" },
         { label: "Other Skills", href: "#Other-Tools" },
         { label: "Contact", href: "#contact" },
-        { label: "CV", href: "/assets/pdf/Currículum_Marcos_López_Martín.pdf", download: "Curriculum_Marcos_Lopez_Martin.pdf" },
+        { label: "CV", href: "/cv.pdf" },
     ],
 };
 

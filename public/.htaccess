@@ -1,10 +1,30 @@
-# Redirigir la raíz a /es
-RewriteEngine On
-RewriteCond %{REQUEST_URI} ^/$
-RewriteRule ^$ /es [R=301,L]
-
 # Configuración para Astro static site
-# Manejo de rutas limpias
+RewriteEngine On
+
+# Forzar barra final en directorios (excepto archivos)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /$1/ [L,R=301]
+
+# Redirigir la raíz a /es/
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^$ /es/ [R=301,L]
+
+# Servir index.html para rutas de directorios
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/?$ /$1/index.html [L]
+RewriteRule ^([^/]+)/$ /$1/index.html [L]
+
+# Prevenir que se muestren listados de directorios
+Options -Indexes
+
+# Configuración de tipos MIME para CSS
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js
+</IfModule>
+
+# Habilitar compresión
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript
+</IfModule>

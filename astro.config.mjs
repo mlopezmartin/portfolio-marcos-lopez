@@ -19,11 +19,14 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   // Configura tu URL de producción (importante para rutas absolutas)
-  site: 'https://tupagina.com', // Reemplaza con tu dominio real
+  site: 'https://mlopezmartin.com',
   
   // Si tu sitio está en un subdirectorio, configura base: '/subdirectorio/'
   // Si está en la raíz del dominio, déjalo así:
   base: '/',
+  
+  // Forzar barra final en las URLs
+  trailingSlash: 'always',
   
   integrations: [
     react()
